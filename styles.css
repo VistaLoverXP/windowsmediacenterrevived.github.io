@@ -187,7 +187,7 @@ body {
 }
 
 .taskbar-bar.connect {
-  background-image: url("Taskbar pieces/Connect Idea bar.png");
+  background-image: url("Taskbar pieces/Connect Idea Bar.png");
   height: 100px;
   max-width: 100%;
   transition: background-image 0.5s
