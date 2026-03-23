@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no,user-scalable=0"/>
+
+    <title>nodes.js - js connected nodes animation</title>
+    <link rel="icon" href="images/User008.ico" type="image/x-icon"> 
+    <meta name="description" content="nodes.js is a nodes/particles animation useable for backgrounds">
+    <meta name="keywords" content="nodes, animation, particlees, web, html5, canvas, backgorund">
+
+    <style type="text/css">
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            font-family: 'Arial';
+            font-size: 14px;
+            line-height: 20px;
+            color: white;
+            background: black;
+        }
+
+        .a,
+        .a:visited {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .a:hover {
+        }
+
+        .btn,
+        a.btn,
+        a.btn:visited {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            cursor: pointer;
+            border: 1px solid #c1c1c1;
+            border-bottom: 2px solid #c1c1c1;
+            padding: 5px; border-radius: 2px;
+            transition: all 250ms;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            box-shadow: 0px 0px 12px 0px rgba(0, 255, 177, 0.5);
+            background: rgba(48, 232, 209, 0.3);
+        }
+
+        .mainBox {
+            width: 500px;
+            display: inline-block;
+            border-radius: 20px;
+            background: rgba(255,255,255,.1);
+            backdrop-filter: blur(10px);
+            border-top: 2px solid rgba(255,255,255, 0.4);
+            border-left: 2px solid rgba(255,255,255, 0.2);
+            box-shadow: 4px 4px 4px rbga(0,0,0, 0.1);
+            margin-top: 200px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .mainBox {
+                width: 300px;
+            }
+        }
+
+        @media only screen and (max-height: 700px) {
+            .mainBox {
+                margin-top: 50px;
+            }
+        }
+    </style>
+<audio id="secretSound" src="Sounds/vista.mp3" preload="auto"></audio>
+
+</head>
+<body>
+    <!-- <nodes.js embedding> -->
+    <script type="text/javascript" src="js/nodes.js"></script>
+    <script type="text/javascript">
+        var nodesjs = new NodesJs({
+            id: 'nodes',
+            width: window.innerWidth,
+            height: window.innerHeight,
+            particleSize: 5,
+            lineSize: 1,
+            particleColor: [108, 0, 207, 0.812],
+            lineColor: [255, 255, 255],
+            backgroundFrom: [31, 186, 146],
+            backgroundTo: [35, 0, 140],
+            backgroundDuration: 7000,
+            nobg: false,
+            number: window.hasOwnProperty('orientation') ? 30: 100,
+            speed: -30
+        });
+    </script>
+
+
+    <div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%;">
+        <canvas id="nodes"></canvas>
+    </div>
+    <!-- </nodes.js embedding> -->
+
+    <script type="text/javascript">
+        window.onresize = function () {
+            nodesjs.setWidth(window.innerWidth);
+            nodesjs.setHeight(window.innerHeight);
+        };
+    </script>
+
+    <div style="position: relative; z-index: 100;">
+        <div style="text-align: center; font-family: 'Arial';">
+            <div class="mainBox">
+                <div style="font-size: 25px; margin-bottom: 5px; margin-top: 10px; position: relative; display: inline-block; margin-bottom: 10px;">
+                    Demo Screening
+                    <div style="font-size: 13px; position: absolute; right: -30px; top: 0px; display: inline-block; color: #9f9f9f;">v1.0</div>
+                </div>
+                <div style="font-size: 13px; margin-bottom: 5px;">
+                    HTML5 Canvas nodes/particles animation with Javascript! Awesome ain't it!? 
+                </div>
+                <div style="font-size: 13px; margin-bottom: 15px;">
+                       <img src="Images/User008.ico" alt="Vista Box" width="100" height="100">
+                       Windows Vista Support please-
+	               <img src="Images/CP001.ico" alt="Vista Box" width="100" height="100">
+                    </a>
+                </div>
+
+                <div style="background: rgba(0,0,0, 0.75); margin-bottom: 25px; text-align: left; padding: 5px; overflow">
+<p>Welcome to the Demo Screen where the newest freatures are being tested.</p>
+   
+                </div>
+
+                <div style="padding: 10px;">
+                    <a class="btn" href="https://youtu.be/zJVWrBR2rK4?si=j8rxsLI87k7KeLyw" target="_blank">
+                        Is Windows Vista still good today?
+                    </a>
+
+                    <a class="btn" href="https://youtu.be/cvJ83v86R3w?si=Mf4DKpmzSupmQA-V" target="_blank">
+                       Learn why Windows Vista was hated on!
+                    </a>
+
+                    <div style="font-size: 13px; margin: auto;margin-top: 15px;">
+                        Copyright &copy;
+                        <a href="mailto:luqmantaylor2009@gmail.com" class="a" target="_blank">Luqman Taylor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="mailto:luqmantaylor2009@gmail.com" target="_blank"><img style="position: absolute; z-index: 2000; top: 0; right: 0; border: 0;" src="Net009.ico" alt="Click me"></a>
+</body>
+</html>

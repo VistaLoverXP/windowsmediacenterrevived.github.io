@@ -1,0 +1,325 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<link rel="stylesheet" href="styles.css">
+
+<link rel="stylesheet" href="https://unpkg.com/7.css/dist/7.css">
+
+<title>Windows Media Center Revival</title> 
+<link rel="icon" href="images/App007.ico" type="image/x-icon">
+<audio id="secretSound" src="Sounds/winxp.mp3" preload="auto"></audio>
+
+<audio id="hover-sound" src="sounds/Cursor_WindowsMediaCenter.wav" preload="auto"></audio>
+<audio id="click-sound" src="sounds/Click_WindowsMediaCenter.wav" preload="auto"></audio>
+
+
+<script> 
+
+var konamicode = [17,74,65,67,75,37,40,40,37,76,73,76]; 
+var kc=0; 
+ 
+function checker(){ 
+if (kc==12){ 
+kc=0;
+
+let sound = new Audio("Sounds/vistashutdown.mp3")
+sound.play()
+
+window.open( 
+              "https://www.youtube.com/watch?v=QN5DW8jlkB0 ", "_blank"); 
+
+}
+} 
+ 
+function keyUp(e) { 
+var keynum; 
+if (window.event){keynum = event.keyCode;} 
+else if (e.which){keynum = e.which;} 
+for (i=0;i<222;i++){ 
+var kx=konamicode[kc]; 
+if (keynum==i){ 
+if (i!=kx){kc=0;} else {kc++;} 
+} 
+} 
+checker(); 
+} 
+ 
+document.onkeyup = keyUp;
+
+function playMusic() {
+    var audio = document.getElementById("Sounds/vistashutdown.mp3");
+    audio.play();
+  
+} 
+ 
+</script> 
+
+<script src="modal.js"></script> 
+
+
+<!--JavaScript code goes here.-->
+<script language="javascript">
+function MouseRollover(MyImage) {
+MyImage.src = "images/App007(GLOW).png";
+}
+function MouseOut(MyImage) {
+MyImage.src = "images/App007.png";
+}
+function myFunction(MyImage) {
+MyImage.src = "images/App007(Press).png"
+let sound = new Audio("Sounds/vistashutdown.mp3")
+sound.play()
+var myWindow = window.open("https://www.youtube.com/watch?v=M3muPwSxxyU", "_blank");
+}
+</script>
+
+
+
+</head> 
+
+<body> 
+
+
+  <h1>Windows Media Center Revived</h1>
+  <audio id="background-audio" src="Sounds/vista.mp3" autoplay hidden></audio>
+</div> 
+
+<div class="MediaCenter">
+<img src="images/App007.png" alt="Logo"
+onMouseOver="MouseRollover(this)"
+onMouseOut="MouseOut(this)" 
+onclick="myFunction(this)" />
+
+
+
+<div class="sidenav"> 
+
+  <div class="taskbar-container">
+
+    <a href="index.html" class="taskbar-bar index"><img src="Images/File124.ico" alt="Index Icon" class="taskbar-icon">About</a> 
+
+    <a href="Connect.html" class="taskbar-bar connect"><img src="Images/Display061.ico" alt="Connect Icon" class="taskbar-icon">Connect</a> 
+
+    <a href="Idea.html" class="taskbar-bar bottom"><img src="Images/File107.ico" alt="Idea Icon" class="taskbar-icon">Idea</a>
+
+    <img src="images/CP001.ico" alt="LoadWindowsVista" class="taskbar-bar non-interactive">
+    <a href="Log In.html"><button id="Sign In.html">Sign In</button></a>
+
+  </div>
+
+</div>
+
+<div class="container-aero">
+ <div class="background">
+  <div class="window glass active" id="mydiv" style="max-width: 60%; height: auto; position: absolute; top: 200px; left: 500px; z-index: 100; --w7-w-bg: #1f7362;">
+    <div class="title-bar" id="mydivheader">
+      <div class="title-bar-text">Connect</div>
+      <div class="title-bar-controls">
+      <button aria-label="Help"></button>
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+      </div>
+    </div>
+
+    <div class="window-body has-space" style="font-size: 32px; color: #000;">
+      <div class="has-scrollbar" style="width: 100%; height: 500px; overflow: auto; color: #000">
+    	<img src="images/App023.ico" alt="MSN">
+	<h3>Idea</h3>
+    	   <p> Images from Windows Vista that were planned to be themes for the website.</p>
+
+	     <img id="myImgVista" src="Vista/windows_vista_59.png" alt="Vista Defult" style="width:100%;max-width:300px">
+	     <img id="myImgStart" src="Vista/windows_vista_90.png" alt="Vista Loading" style="width:100%;max-width:300px">
+	     <img id="myImgGlow" src="Vista/windows_vista_55.png" alt="Vista Background 1" style="width:100%;max-width:300px">
+	     <img id="myImgStartAlt" src="Vista/windows_vista_53.png" alt="Vista Background 2" style="width:100%;max-width:300px">
+	     <div id="myModal" class="modal">
+  		  <span class="close">&times;</span>
+  		  <img class="modal-content" id="img01">
+ 		  <div id="caption"></div>
+
+      </div>
+  </div> 
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImgVista");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImgStart");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImgGlow");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImgStartAlt");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+
+<audio id="hover-sound" src="Sounds/Cursor_WindowsMediaCenter.wav" preload="auto"></audio>
+<audio id="click-sound" src="Sounds/Click_WindowsMediaCenter.wav" preload="auto"></audio>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hoverSound = document.getElementById('hover-sound');
+  const clickSound = document.getElementById('click-sound');
+  const interactiveElements = document.querySelectorAll('.taskbar-container a, .taskbar-container button');
+
+  console.log("JS initialized. Found elements:", interactiveElements.length);
+
+  interactiveElements.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      console.log("Hovered:", el);
+      hoverSound.currentTime = 0;
+      hoverSound.play().catch(err => console.warn("Hover sound blocked:", err));
+    });
+
+    // Click sound that plays before page switch
+    el.addEventListener('click', (event) => {
+      const href = el.getAttribute('href');
+
+      if (href && href.endsWith('.html')) {
+        event.preventDefault(); // Stop instant navigation
+        clickSound.currentTime = 0;
+        clickSound.play().catch(()=>{});
+
+        setTimeout(() => {
+          window.location.href = href;
+        }, 500);
+      } else {
+        clickSound.currentTime = 0;
+        clickSound.play().catch(()=>{});
+      }
+    });
+  });
+});
+</script>
+</body> 
+
+</html> 
